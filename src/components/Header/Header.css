@@ -1,0 +1,23 @@
+.logo1{
+    height: 80px;
+}
+.logo{
+    text-align: center;
+}
+.logo nav a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin: 15px;
+}
+.logo nav a:hover{
+    color: black;
+    background-color: lightcyan;
+}
+.logo nav{
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}

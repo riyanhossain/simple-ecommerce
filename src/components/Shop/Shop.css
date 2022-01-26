@@ -1,0 +1,16 @@
+.shop{
+    display: flex;
+}
+
+.pr_container{
+    width: 75%;
+    border-right:1px solid gray ;
+    background-color: floralwhite;
+}
+.cart{
+    position: fixed;
+    width: 25%;
+    margin-left: 20px;
+    background-color: lightblue;
+    right: 0px;
+}
