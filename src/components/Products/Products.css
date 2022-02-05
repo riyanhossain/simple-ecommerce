@@ -5,6 +5,7 @@
 }
 .image{
     height: auto;
+    width: auto;
 }
 .info-container{
     width: 70%;
@@ -15,9 +16,14 @@
 }
 .price{
     font-size: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .name{
     font-weight: 500;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .bttn{
     width: 250px;
