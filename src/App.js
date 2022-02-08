@@ -10,25 +10,38 @@ import {
 import Shop from './components/Shop/Shop';
 import Order from './components/Order/Order';
 import Header from './components/Header/Header';
-
+import Inventory from './components/Inventory/Inventory';
+import { createContext, useState } from 'react';
+export const cartContex = createContext();
 function App() {
+  const [cart, setCart] = useState([])
   return (
 
-
-    <div>
+    <cartContex.Provider value={[cart, setCart]}>
       <BrowserRouter>
+        <Header />
+
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/shop" element={<Home />} />
+
+          <Route path="/" element={<Home />} />
+          
+            <Route path="/shop" element={<Shop />} />
+
+
           <Route path="/order" element={<Order />} />
+          <Route path="/inventory" element={<Inventory />} />
+
         </Routes>
+
+
 
         {/* <Routes>
             <Route path="/*" element={<Error/>}/>
           </Routes> */}
+          
       </BrowserRouter>
 
-    </div>
+    </cartContex.Provider>
 
 
 

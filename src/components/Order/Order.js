@@ -1,23 +1,29 @@
 import React, { useContext } from 'react';
-import Header from '../Header/Header';
+import { cartContex } from '../../App';
 import Cart from '../Cart/Cart';
+import Products from '../Products/Products';
 import './Order.css'
-import  CartContex, { cartContex1 } from '../CartContex/CartContex';
-import Shop from '../Shop/Shop';
-import Home from '../Home/Home';
-import DataContex from '../dataContex/dataContex';
-import OrderList from '../OrderList/OrderList';
+import ReviewItem from './reviewItem';
 
 const Order = () => {
+    const [cart, setCart] = useContext(cartContex)
     return (
-        <DataContex>
-            <CartContex>
-                <div>
-                    <Header></Header>
-                    <OrderList/>
+        <div>
+            <div className='shop'>
+                    <div className="pr_container">
+                    {
+                            cart.map(pd =>
+                                <ReviewItem product={pd} ></ReviewItem>
+                            )
+                        }
+                    </div>
+                    <div className="cart">
+                        <Cart cart={cart}></Cart>
+                        <button className='btnn'>Place Order</button>
+                    </div>
                 </div>
-            </CartContex>
-        </DataContex>
+            
+        </div>
 
 
     );

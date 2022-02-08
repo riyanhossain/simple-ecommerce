@@ -37,3 +37,8 @@
 
     background-color: lightcyan;
 }
+.btnRemove{
+    padding: 8px;
+    background-color: goldenrod;
+    border-radius: 5px;
+}

@@ -1,28 +1,23 @@
-/* .bttn{
-    width: 250px;
-    height: 30px;
-    background-color: goldenrod;
-    border-radius: 3px;
-    margin-bottom: 10px;
-    font-weight: 650;
+.shop{
+    display: flex;
 }
-.bttn:hover{
 
-    background-color: lightcyan;
+.pr_container{
+    width: 75%;
+    border-right:1px solid gray ;
+    background-color: floralwhite;
 }
-.image{
-    height: auto;
+.cart{
+    position: fixed;
+    width: 25%;
+    margin-left: 20px;
+    background-color: lightblue;
+    right: 0px;
 }
-.info-container{
-    width: 70%;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: auto;
-    
+.btnn{
+    padding: 5px;
+    background-color: goldenrod;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 40%;
 }
-.price{
-    font-size: 22px;
-}
-.name{
-    font-weight: 500;
-} */

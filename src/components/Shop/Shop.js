@@ -1,20 +1,17 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
-import Header from '../Header/Header';
 import Products from '../Products/Products';
 import './Shop.css'
-import { dataContex1 } from '../dataContex/dataContex';
-import { cartContex1 } from '../CartContex/CartContex';
-import { cartKeyContex } from '../CartKeyContex/CartKeyContex';
+import { cartContex } from '../../App';
+import fakedata from '../../fakeData'
 
 
 const Shop = () => {
-    const [products, setProducts] = useContext(dataContex1)
-    const [cart, setCart] = useContext(cartContex1)
+    const [products, setProducts] = useState(fakedata)
+    const [cart, setCart] = useContext(cartContex)
     const handleClick = (pd) => {
         const newCart = [...cart, pd];
         setCart(newCart)
-        localStorage.setItem(pd.key,JSON.stringify(pd))
     }
  
     return (
